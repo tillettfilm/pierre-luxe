@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Pierre Luxe · Who You're Dealing With · Tillett Film</title>
 <meta name="robots" content="noindex, nofollow">
-<meta name="description" content="Who You're Dealing With. A film in his own words, from a night in London, by Tillett Film.">
+<meta name="description" content="Who You're Dealing With. A film from one night in London, by Tillett Film.">
 <meta property="og:title" content="Pierre Luxe · Who You're Dealing With · Tillett Film">
-<meta property="og:description" content="A film in his own words, from a night in London.">
+<meta property="og:description" content="A film from one night in London.">
 <meta property="og:image" content="https://tillettfilm.github.io/pierre-luxe/assets/shared/og.jpg">
 <meta property="og:url" content="https://tillettfilm.github.io/pierre-luxe/">
 <meta property="og:type" content="website">
@@ -371,25 +371,6 @@
   .work-desc { margin-top: 4px; font-size: 13.5px; line-height: 1.55; color: var(--ink-soft); }
   @media (max-width: 800px) { .work-grid { grid-template-columns: 1fr; gap: 26px; } }
 
-  /* The look: hard-edged frames, 2.39:1, no captions */
-  .look-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: 10px;
-  }
-  .look-frame {
-    position: relative;
-    aspect-ratio: 1280 / 536;
-    background: #0a0a0a;
-    overflow: hidden;
-  }
-  .look-frame img {
-    position: absolute; inset: 0;
-    width: 100%; height: 100%;
-    object-fit: cover; display: block;
-  }
-  @media (max-width: 700px) { .look-grid { grid-template-columns: 1fr; gap: 8px; } }
-
   .how-rows { border-bottom: 1px solid var(--line); }
   .how-row {
     display: grid;
@@ -627,13 +608,13 @@
         <div class="cover-head" id="coverHead">
           <h1 class="cover-title" id="coverTitle">Pierre<br>Luxe.</h1>
           <p class="cover-sub">Who You're Dealing With.</p>
-          <p class="cover-tagline">A film in his own words, from a night in London.</p>
+          <p class="cover-tagline">A film from one night in London.</p>
         </div>
 
         <div class="note" id="coverNote">
           <p class="note-salute">Hi Pierre,</p>
-          <p>Since we spoke I've done my homework on what this is for and where it's going to be seen. It deserves more than a quick two-minute video.</p>
-          <p>I want you walking out of that room with something people stop for, send on and remember. So I've put everything into one film, with a short piece that goes out while the room's still talking about the night.</p>
+          <p>Since we spoke I've done my homework on what this is for and where it's going to be seen. I think this is an opportunity to overdeliver and cash in with opportunities.</p>
+          <p>I want you walking out the room with something powerful enough to engage all those attending. More than just a reel people forget. So I've put everything into one film, with a short piece that goes out while it's still hot.</p>
           <p class="note-sign">Charlie</p>
         </div>
       </div>
@@ -645,7 +626,7 @@
         </div>
         <div class="slate-item">
           <div class="slate-label">Filmed</div>
-          <div class="slate-value">14 and 15 October</div>
+          <div class="slate-value">15 October, London</div>
         </div>
         <div class="slate-item">
           <div class="slate-label">Director</div>
@@ -662,8 +643,9 @@
 
   <!-- ====== ACT 02 · THE FILM ======
        No listening act: Charlie's brief drops What You Told Me for this one.
-       Scope revised 9 Oct: one film built on the sit-down, plus The Arrival.
-       No vertical edits or stills.
+       Scope revised 9 Oct: one film plus The Arrival, no vertical edits or
+       stills. The sit-down was removed on 12 Oct: a spot for it can't be
+       guaranteed.
        Showreel is Pierre's own copy: frames 121 to 178 of tillettfilm-hero_3.mp4
        (the Calibre flag, card, sign and T-shirt) are cut. -->
   <section class="scene" data-scene="film" data-title="The Film">
@@ -680,16 +662,15 @@
 
       <div class="scene-header">
         <h2 class="heading-large">Who you're dealing with.</h2>
-        <p class="byline">Through my lens.</p>
       </div>
 
       <div class="lens">
-        <p>Your buyers commit serious money from thousands of miles away. Before they do, they want to know who they're dealing with. This shows them.</p>
-        <p>The room is the proof, but most of the people who matter to you won't be in it. Film puts them there.</p>
-        <p>The suit and the cigar are the look. The story is why serious people trust you.</p>
-        <p>It has to hold its own next to the developers' own marketing. That's the bar.</p>
-        <p>Everything goes into one film, built from a proper conversation, not a few lines grabbed between handshakes. One short piece starts the noise while the event's fresh.</p>
-        <p>Considered, not staged. Arrivals, conversations, the terrace after. Your own words carry it.</p>
+        <p>Your buyers commit serious money from thousands of miles away. Before they do they want to know who they're dealing with. This has to show them.</p>
+        <p>The room is the proof but most of the people who matter to you won't be in it. Film puts them there.</p>
+        <p>The story is why serious people trust you.</p>
+        <p>It has to hold its own next to the developers' own marketing.</p>
+        <p>Everything goes into one film, not a few lines grabbed between handshakes.</p>
+        <p>Considered, not staged.</p>
       </div>
 
       <div class="section">
@@ -705,7 +686,7 @@
             </button>
             <div class="work-cat">Heroic Man</div>
             <div class="work-title">Pete Taylor: MM300</div>
-            <p class="work-desc">From three years filming Heroic Man. Men with presence, filmed with weight.</p>
+            <p class="work-desc">From three years filming Heroic Man. Men with presence.</p>
           </div>
           <div class="work-card">
             <button type="button" class="work-thumb" data-video="assets/work/ollie-ollerton.mp4" aria-label="Play Ollie Ollerton">
@@ -718,28 +699,13 @@
           </div>
           <div class="work-card">
             <button type="button" class="work-thumb" data-video="assets/work/a-day-in-the-life.mp4" aria-label="Play A Day in the Life">
-              <img src="assets/work/a-day-in-the-life-thumb.jpg" alt="Pierre on the phone in the green suit" loading="lazy">
+              <img src="assets/work/a-day-in-the-life-photo.jpg" alt="Pierre in the green suit at the tailor's" loading="lazy">
               <span class="work-play"></span>
             </button>
             <div class="work-cat">Liverpool</div>
             <div class="work-title">A Day in the Life</div>
             <p class="work-desc">Work we've already made together.</p>
           </div>
-        </div>
-      </div>
-
-      <!-- Frames from the Liverpool film at 122.0s, 196.5s, 124.5s and 140.2s,
-           cropped clear of the burned-in subtitles. -->
-      <div class="section">
-        <div class="section-head">
-          <h3 class="heading-medium">The look.</h3>
-          <p class="byline">From the film we made in Liverpool. London adds the evening and the terrace.</p>
-        </div>
-        <div class="look-grid">
-          <div class="look-frame"><img src="assets/lookbook/look-fitting-1280.jpg" alt="Pierre under the fitting room lights in the green suit" loading="lazy"></div>
-          <div class="look-frame"><img src="assets/lookbook/look-cigar-1280.jpg" alt="Pierre with a cigar, smoke rising" loading="lazy"></div>
-          <div class="look-frame"><img src="assets/lookbook/look-lapel-1280.jpg" alt="A gold pin on the green lapel above a white pocket square" loading="lazy"></div>
-          <div class="look-frame"><img src="assets/lookbook/look-lights-1280.jpg" alt="Pierre in close-up, lights behind him" loading="lazy"></div>
         </div>
       </div>
 
@@ -758,38 +724,20 @@
           <div class="how-row">
             <dt>Before we film</dt>
             <dd>
-              <p>A creative call, then a one-page treatment back to you covering structure, look and music. We agree three questions for the sit-down on the call.</p>
-              <p class="soft">A venue check before the day, even if it's photos and a call: the terrace, the light, where the sit-down happens.</p>
+              <p>A creative call, then a one-page plan back to you.</p>
+              <p class="soft">A venue check before the day, even if it's photos and a call.</p>
             </dd>
           </div>
           <div class="how-row">
-            <dt>The sit-down</dt>
+            <dt>First Look</dt>
             <dd>
-              <p>45 minutes, properly lit and mic'd. It's the spine of the film. Your view on the market, how you work, why clients trust you.</p>
-              <p class="soft">Ideally the day before the event, when you're not working the room.</p>
+              <p>15 to 20 seconds, out within 72 hours of filming. It'll be a significant piece to show you're there.</p>
+              <p class="soft">But the masterpiece is where time creates an asset that'll open doors.</p>
             </dd>
-          </div>
-          <div class="how-row">
-            <dt>The event</dt>
-            <dd>Observational. Arrivals, conversations and you working the room.</dd>
-          </div>
-          <div class="how-row">
-            <dt>The terrace</dt>
-            <dd>Suit, cigar, London behind you.</dd>
           </div>
           <div class="how-row">
             <dt>The film</dt>
-            <dd>
-              <p>Up to two minutes. Your voice from the sit-down over footage of the night. Graded, sound designed and cut to licensed music.</p>
-              <p class="soft">A 16:9 master plus a 9:16 version with subtitles.</p>
-            </dd>
-          </div>
-          <div class="how-row">
-            <dt>The Arrival</dt>
-            <dd>
-              <p>15 to 20 seconds, 9:16. No talking. The suit, the terrace, the cigar, London at night.</p>
-              <p class="soft">It goes out within 72 hours of filming and points people at the film when it lands.</p>
-            </dd>
+            <dd>Up to two minutes, filmed observationally at the event. Graded, sound designed and cut to licensed music.</dd>
           </div>
           <div class="how-row">
             <dt>Changes</dt>
@@ -798,40 +746,36 @@
           <div class="how-row">
             <dt>Where it lives</dt>
             <dd>
-              <p>The film goes on your website and YouTube. It's the link you send a serious buyer before the first call. The 9:16 version gets pinned on your Instagram.</p>
-              <p class="soft">The Arrival goes out on Reels and Stories in the days after the event, then the film follows.</p>
+              <p>The film goes on your website and YouTube. It's the link you send a serious buyer before the first call. It also gets pinned on your Instagram.</p>
+              <p class="soft">First Look goes out on Reels and Stories in the days after the event, then the film follows.</p>
             </dd>
           </div>
         </dl>
       </div>
 
-      <!-- Sit-down the day before the event. "The week before" for the call is
-           already past, so the call follows Greenlight. 72 hours and seven
-           working days are counted from the event on Thursday 15 October. -->
+      <!-- "The week before" for the call is already past, so the call follows
+           Greenlight (hold: 12pm Tue 13). 72 hours and seven working days are
+           counted from the event on Thursday 15 October. -->
       <div class="section">
         <div class="section-head">
           <h3 class="heading-medium">The dates.</h3>
         </div>
         <dl class="how-rows schedule">
           <div class="how-row">
-            <dt>Mon 12 October</dt>
+            <dt>Tue 13 October</dt>
             <dd>Creative call.</dd>
           </div>
           <div class="how-row">
-            <dt>Tue 13 October</dt>
-            <dd>The treatment, then the venue check.</dd>
-          </div>
-          <div class="how-row">
             <dt>Wed 14 October</dt>
-            <dd>The sit-down.</dd>
+            <dd>The plan, then the venue check.</dd>
           </div>
           <div class="how-row">
             <dt>Thu 15 October</dt>
-            <dd>The event and the terrace, London.</dd>
+            <dd>Filming in London.</dd>
           </div>
           <div class="how-row">
             <dt>By Sun 18 October</dt>
-            <dd>The Arrival, while the event's still fresh.</dd>
+            <dd>First Look, while the event's still fresh.</dd>
           </div>
           <div class="how-row">
             <dt>By Mon 26 October</dt>
@@ -849,21 +793,20 @@
           <h3 class="heading-medium">What I need from you.</h3>
         </div>
         <ul class="needs">
-          <li><span>01</span>The venue and timings for the sit-down and the event.</li>
+          <li><span>01</span>The venue and timings.</li>
           <li><span>02</span>The host's OK for me to film at the event and to post footage from it.</li>
-          <li><span>03</span>Access to an outdoor terrace for the cigar shots, since you can't smoke indoors in London venues.</li>
-          <li><span>04</span>45 minutes for the sit-down, plus twenty minutes on the terrace.</li>
         </ul>
       </div>
     </div>
   </section>
 
   <!-- ====== ACT 03 · GREENLIGHT ======
-       Priced separately: the film £3,500, The Arrival £500 = £4,000. The anchor
-       is stated once, in the line under the price.
+       £4,000 as one total, not itemised (12 Oct). The anchor is stated once,
+       in the line under the price. Two pieces: First Look (the reel he asked
+       for) and the film.
        Never on the page: the call ballpark, the developer or the event's host.
-       Hold moved from Tue 13 to Mon 12 Oct: the sit-down on Wed 14 is filming,
-       and the hold has to land 48 hours before it. -->
+       Hold 12pm Tue 13 Oct: 48 hours before filming on Thu 15. (It was briefly
+       Mon 12 while a sit-down on Wed 14 was in scope; removed 12 Oct.) -->
   <section class="scene" data-scene="greenlight" data-title="Greenlight">
     <div class="scene-inner">
       <div class="label-caps act-label">Act 03 · Greenlight</div>
@@ -877,7 +820,7 @@
 
       <div class="scene-header">
         <h2 class="heading-large">The investment.</h2>
-        <p class="lead">Priced separately: the film £3,500 and The Arrival £500.</p>
+        <p class="lead">Two pieces: the reel you were after and the film that opens doors.</p>
       </div>
 
       <div class="invest">
@@ -889,10 +832,9 @@
         <div>
           <div class="invest-label">Includes</div>
           <ul class="invest-list">
-            <li>The film, up to two minutes, in 16:9 and 9:16</li>
-            <li>The Arrival, 15 to 20 seconds, out within 72 hours</li>
-            <li>The sit-down, the event and the terrace</li>
-            <li>The creative call, treatment and venue check</li>
+            <li>First Look, out within 72 hours of filming</li>
+            <li>The film, up to two minutes</li>
+            <li>The creative call, one-page plan and venue check</li>
             <li>Colour, sound design and licensed music</li>
           </ul>
         </div>
@@ -913,13 +855,13 @@
         <p class="lead" style="margin-top:0">Next time you're in a room like this, in London or Dubai, we pick up where this leaves off.</p>
       </div>
 
-      <p class="hold">This holds until 12pm on Monday 12 October, so the date can be locked.</p>
+      <p class="hold">This holds until 12pm on Tuesday 13 October, so the date can be locked.</p>
 
       <form class="greenlight" id="greenlightForm" novalidate>
         <p class="agreement-quote">Press Greenlight. That is the paperwork.</p>
         <div class="agreement-steps">
-          <div class="agreement-step"><span class="agreement-step-num">01</span><span>I send the deposit invoice and both dates are locked in.</span></div>
-          <div class="agreement-step"><span class="agreement-step-num">02</span><span>We have the creative call and agree three questions for the sit-down.</span></div>
+          <div class="agreement-step"><span class="agreement-step-num">01</span><span>I send the deposit invoice and the 15th is locked in.</span></div>
+          <div class="agreement-step"><span class="agreement-step-num">02</span><span>We have the creative call and I send you the plan.</span></div>
         </div>
 
         <div class="fields">
