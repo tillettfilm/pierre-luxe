@@ -510,6 +510,9 @@
   }
   .btn-cta:hover:not(:disabled) { background: transparent; color: var(--ink); }
   .btn-cta:disabled { opacity: 0.35; cursor: not-allowed; }
+  .btn-cta.sending:disabled { opacity: 1; cursor: progress; }
+  .send-fail { margin-top: 14px; font-size: 13px; line-height: 1.5; color: var(--ink); }
+  .send-fail a { color: inherit; }
   .signature { display: flex; align-items: center; gap: 14px; }
   .signature-mark {
     width: 44px; height: 44px; border-radius: 50%;
@@ -842,6 +845,7 @@
             </div>
           </div>
         </div>
+        <p class="send-fail" id="sendFail" role="alert" hidden>That didn't go through. Press Greenlight again or email <a href="mailto:charlie@tillettfilm.com">charlie@tillettfilm.com</a>.</p>
       </form>
     </div>
   </section>
@@ -1066,6 +1070,8 @@
   const signBtn = document.getElementById('signBtn');
   const nameField = document.getElementById('gName');
   const noteField = document.getElementById('gNote');
+  const sendFail = document.getElementById('sendFail');
+  const BTN_LABEL = signBtn.textContent;
 
   function syncSignBtn() { signBtn.disabled = !nameField.value.trim(); }
   nameField.addEventListener('input', syncSignBtn);
@@ -1075,33 +1081,41 @@
     return name + ' has greenlighted ' + PROJECT + '. Send the deposit invoice for £1,000.';
   }
 
-  // If the POST fails, fall back to a prefilled email so a greenlight is never silently lost.
-  function greenlightFallback(name, note) {
-    const subject = encodeURIComponent('Greenlight · Pierre Luxe · ' + PROJECT);
-    const body = encodeURIComponent(greenlightMessage(name) + (note ? '\n\nVenue and timings: ' + note : ''));
-    window.location.href = 'mailto:charlie@tillettfilm.com?subject=' + subject + '&body=' + body;
-  }
-
+  // A plain form post: no preflight, and keepalive lets it finish even if the
+  // page is closed straight after. The thank-you only shows once Formspree has
+  // it; if it fails, the button comes back with a line to try again.
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     const name = nameField.value.trim();
     if (!name || signBtn.disabled) return;
     const note = noteField.value.trim();
     signBtn.disabled = true;
-    playClosingScreen();
+    signBtn.classList.add('sending');
+    signBtn.textContent = 'Sending…';
+    sendFail.hidden = true;
+
+    const data = new URLSearchParams({
+      _subject: 'Pierre Luxe · Greenlight · ' + PROJECT,
+      subject: 'Pierre Luxe · Greenlight · ' + PROJECT,
+      message: greenlightMessage(name),
+      name: name,
+      note: note || '(none)'
+    });
 
     fetch('https://formspree.io/f/' + FORMSPREE_ID, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify({
-        _subject: 'Pierre Luxe · Greenlight · ' + PROJECT,
-        subject: 'Pierre Luxe · Greenlight · ' + PROJECT,
-        message: greenlightMessage(name),
-        name: name,
-        note: note || '(none)'
-      })
-    }).then(r => { if (!r.ok) greenlightFallback(name, note); })
-      .catch(() => greenlightFallback(name, note));
+      headers: { 'Accept': 'application/json' },
+      body: data,
+      keepalive: true
+    }).then(r => {
+      if (!r.ok) throw new Error('Formspree ' + r.status);
+      playClosingScreen();
+    }).catch(() => {
+      signBtn.classList.remove('sending');
+      signBtn.textContent = BTN_LABEL;
+      syncSignBtn();
+      sendFail.hidden = false;
+    });
   });
 </script>
 
